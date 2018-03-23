@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="50dp"/>
+
+    <ImageView
+        android:id="@+id/img_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toStartOf="@+id/notice_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/notice_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:gravity="start"
+        android:ellipsize="end"
+        android:text="标题 主要标题"
+        android:maxLines="1"
+        android:textSize="13dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toStartOf="@+id/time_tv"
+        app:layout_constraintStart_toEndOf="@id/img_icon"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/time_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="2018-02-23 9:20:36"
+        android:layout_marginRight="8dp"
+        android:gravity="end"
+        android:maxLines="1"
+        android:textColor="#FF0000"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/notice_title"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/message_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:text="听说 oppo R15 开始抽奖了 大家来抽奖啊"
+        android:gravity="start"
+        android:maxLines="1"
+        android:textColor="#FF0000"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/time_tv"
+        app:layout_constraintStart_toStartOf="@+id/notice_title"
+        app:layout_constraintTop_toBottomOf="@+id/guideline"/>
+
+    <TextView
+        android:id="@+id/message_detail"
+        android:layout_width="0dp"
+        android:text="享分期免息
+        4 月 1 日首销当天，购买 2000 元以上机型可享受 6 期分期免息，2000 元以下机型可享受 3 期分期免息。"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:maxLines="2"
+        android:textColor="#FF0000"
+        android:textSize="13dp"
+        app:layout_constraintEnd_toEndOf="@+id/time_tv"
+        app:layout_constraintStart_toStartOf="@+id/notice_title"
+        app:layout_constraintTop_toBottomOf="@+id/message_tv"/>
+
+    <TextView
+        android:id="@+id/left_text"
+        android:layout_width="0dp"
+        android:text="查看详情 >>"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
+        android:layout_marginTop="13dp"
+        android:gravity="start"
+        android:textColor="#36a8f2"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/right_text"
+        app:layout_constraintStart_toStartOf="@+id/message_detail"
+        app:layout_constraintTop_toBottomOf="@+id/message_detail"/>
+
+    <TextView
+        android:id="@+id/right_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:gravity="end"
+        android:text="查看详情>>"
+        android:textColor="#36a8f2"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/time_tv"
+        app:layout_constraintStart_toEndOf="@id/left_text"
+        app:layout_constraintTop_toTopOf="@+id/left_text"
+        app:layout_constraintVertical_bias="0.0" />
+
+</android.support.constraint.ConstraintLayout>
